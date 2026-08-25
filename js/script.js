@@ -176,7 +176,22 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  if (burger && navLinks) {
+  if (navLinks) {
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = navLinks.querySelectorAll("a[href^='#']");
+    
+    const spyIo = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          navItems.forEach((a) => {
+            a.classList.toggle("active", a.getAttribute("href") === `#${e.target.id}`);
+          });
+        }
+      });
+    }, { rootMargin: "-40% 0px -50% 0px" });
+    
+    sections.forEach((sec) => spyIo.observe(sec));
+
     burger.addEventListener("click", () => {
       const open = navLinks.classList.toggle("open");
       burger.setAttribute("aria-expanded", String(open));
