@@ -237,11 +237,33 @@
         setErr("message", v("message").length >= 10 ? "" : "Please write at least 10 characters.")
       ];
       if (checks.every(Boolean)) {
-        note.className = "formnote ok";
-        note.textContent = "Thanks! Your message is ready — connect a form service (Formspree / EmailJS) to deliver it.";
-        // Hook a backend here later, e.g.:
-        // fetch("https://formspree.io/f/XXXX", { method: "POST", body: new FormData(form) })
-        form.reset();
+        note.className = "formnote";
+        note.textContent = "Sending message...";
+        
+        const formData = new FormData(form);
+        formData.append("access_key", "f2b4de9f-043b-4970-b747-a4091c986385");
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        })
+        .then(async (response) => {
+          const json = await response.json();
+          if (response.status === 200) {
+            note.className = "formnote ok";
+            note.textContent = "Thanks! Your message has been successfully sent.";
+            form.reset();
+          } else {
+            console.error(response);
+            note.className = "formnote bad";
+            note.textContent = json.message || "Something went wrong!";
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          note.className = "formnote bad";
+          note.textContent = "Something went wrong! Please try again later.";
+        });
       } else {
         note.className = "formnote bad";
         note.textContent = "Please fix the highlighted fields.";
