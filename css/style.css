@@ -103,8 +103,8 @@ p{margin:0 0 1rem}
 
 /* ABOUT */
 .about__grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-.frame{position:relative;border-radius:26px;padding:8px;background:linear-gradient(160deg,rgba(34,211,238,.35),transparent 60%);border:1px solid var(--line)}
-.frame img{border-radius:24px;object-fit:cover;width:240px;height:240px;margin:auto}
+.frame{position:relative;border-radius:50%;padding:8px;background:linear-gradient(160deg,rgba(34,211,238,.35),transparent 60%);border:1px solid var(--line);width:fit-content;margin:auto}
+.frame img{border-radius:50%;object-fit:cover;width:280px;height:280px;margin:auto}
 .ticks{list-style:none;padding:0;margin:1.2rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.5rem}
 .ticks li{color:var(--muted);font-size:.93rem;padding-left:1.4rem;position:relative}
 .ticks li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent)}

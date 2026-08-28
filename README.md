@@ -9,7 +9,7 @@ portfolio/
 ├── css/style.css
 ├── js/script.js
 ├── assets/
-│   ├── profile.jpg
+│   ├── My_Photo.png
 │   ├── Yash-Saxena-Resume.pdf
 │   └── projects/
 │       ├── trainify.png
@@ -23,7 +23,7 @@ portfolio/
 
 | What | Where |
 |---|---|
-| Profile photo | Replace `assets/profile.jpg` (used in hero + about) |
+| Profile photo | Replace `assets/My_Photo.png` (used in hero + about) |
 | Project screenshots | Replace files in `assets/projects/` (keep the same names) |
 | Resume | Replace `assets/Yash-Saxena-Resume.pdf` |
 | Email | Search `YOUR_EMAIL` in `index.html` |
