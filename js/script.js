@@ -90,9 +90,9 @@
     "Website redesign", "Full-stack applications", "Backend development", "Admin dashboards", "Database integration"];
 
   const FREELANCE = [
-    { label: "Business Website", title: "Geeta Aggarwal Sweets", desc: "Website for Geeta Aggarwal Sweets.", link: "https://geetaaggarwalsweets.vercel.app/" },
-    { label: "Business Website", title: "Devshree Dosa Corner", desc: "Website for Devshree dosa corner.", link: "https://devshree-dosa-delight.vercel.app/" },
-    { label: "Business Website", title: "Bikaner Misthan Bhandaar", desc: "Website for Bikaner Misthan Bhandaar.", link: "https://bikanermisthanbhandaar.vercel.app/" }
+    { label: "Business Website", title: "Shiv Shakti Multi Service", desc: "Website for Shiv Shakti Multi Service.", link: "https://www.shivshaktimultiservice.co.in/" },
+    { label: "Business Website", title: "Sant Nirankari Enterprises", desc: "Website for Sant Nirankari Enterprises.", link: "https://www.santnirankarienterprises.in/" },
+    { label: "Business Website", title: "Desire Tour Travels", desc: "Website for Desire Tour Travels.", link: "https://desire-journeys.vercel.app/" }
   ];
 
   /* ---------- RENDER ---------- */
